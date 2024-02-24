@@ -93,6 +93,7 @@ class Visuals {
                 // document.querySelector('.result__details').classList.add('hidden')
                 // e.target.previousElementSibling.textContent = 'See the details'
                 self.restoreOverflowBtnResults()
+                document.querySelector('.game__question-btn').textContent = "Answer"
             }
         })
 

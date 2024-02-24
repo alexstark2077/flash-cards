@@ -397,6 +397,7 @@ function runTheQuiz() {
     Visual.toggleResultsSection('hide')
     startTheGame()
     Visual.toggleGameSection('show')
+    document.querySelector('.game__question-btn').textContent = "Answer"
 }
 
 // ================================================================================================
