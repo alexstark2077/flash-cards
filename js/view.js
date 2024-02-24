@@ -26,10 +26,10 @@ class Visuals {
         const [year, month, date, hours, minutes] = arr
 
         // SHOW THE WORLDLY TIME:
-        // const hoursRegular = hours>12 ? hours-12 : hours
-        // nowEl.innerHTML = `${year-4500}:${month}:${date} — ${hoursRegular}<span>:</span>${minutes.toString().padStart(2,0)}`
+        const hoursRegular = hours>12 ? hours-12 : hours
+        nowEl.innerHTML = `${year-4500}:${month}:${date} — ${hoursRegular}<span>:</span>${minutes.toString().padStart(2,0)}`
         // nowEl.innerHTML = `${hoursRegular}<span>:</span>${minutes.toString().padStart(2,0)}`
-        // return
+        return
 
         const hoursRemain = 60-minutes !== 60 ? 23-hours : 23-hours+1
         const minutesRemain = 60-minutes === 60 ? 0 : 60-minutes
@@ -48,7 +48,7 @@ class Visuals {
             const btnClicked = [...e.target.closest('button').classList].find(x => x.startsWith('header__btn--')).replace('header__btn--','')
             const addForm = document.querySelector('.add')
             if(btnClicked === 'new') {
-                console.log(`Add new word...`)
+                // console.log(`Add new word...`)
                 self.toggleAllSection('hide')
                 self.toggleWordsSection('hide')
                 self.toggleGameSection('hide')
@@ -59,7 +59,7 @@ class Visuals {
                 document.querySelector('.add__form-btn').textContent = 'Add'
             }
             if(btnClicked === 'play1') {
-                console.log(`Play with added...`)
+                // console.log(`Play with added...`)
                 handler('quiz')
             }
             // if(btnClicked === 'play2') {
@@ -71,7 +71,7 @@ class Visuals {
             if(!e.target.classList.contains('result__btn')) return
 
             if(e.target.textContent === 'See the details') {
-                console.log('toggle details')
+                // console.log('toggle details')
                 self.toggleBodyOverflow('permit')
                 document.querySelector('.result__details').classList.remove('hidden')
                 e.target.textContent = 'Hide the details'
@@ -85,7 +85,7 @@ class Visuals {
             }
             
             if(e.target.textContent === 'Play again') {
-                console.log('Playing again...')
+                // console.log('Playing again...')
                 startTheGame()
                 self.toggleResultsSection()
                 self.toggleGameSection()
@@ -488,12 +488,12 @@ class Visuals {
         }
         
         if(flag==='next' && (currentPageShowAll > pagesInTotal)) {
-            console.log(`last page reached`)
+            // console.log(`last page reached`)
             currentPageShowAll = 1
         }
 
         if(flag==='prev' && currentPageShowAll === 1) {
-            console.log(`you're on the 1st page!`)
+            // console.log(`you're on the 1st page!`)
             currentPageShowAll = pagesInTotal
         }
 

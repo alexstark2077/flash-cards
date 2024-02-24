@@ -44,7 +44,7 @@ class App {
 
     pushToLocalStorage() {
         localStorage.setItem('flashCardsData', JSON.stringify(this.#database))
-        console.log( 'in localStorage:', JSON.parse(localStorage.getItem('flashCardsData')) )
+        // console.log( 'in localStorage:', JSON.parse(localStorage.getItem('flashCardsData')) )
     }
 
     // ================================================================================================
@@ -70,7 +70,7 @@ class App {
     // ================================================================================================
 
     getOtherOptions(arrOfIndexes) {
-        console.log(`randomIndexes`,arrOfIndexes)
+        // console.log(`randomIndexes`,arrOfIndexes)
         const thePicked = []
         let randomIndex
         
@@ -89,7 +89,7 @@ class App {
             thePicked.push(subarray)
             
         })
-        thePicked.forEach(x=>console.log(x))
+        // thePicked.forEach(x=>console.log(x))
         return thePicked
     }
 

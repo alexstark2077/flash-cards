@@ -5,13 +5,8 @@
 /* POSSIBLE IMPROVEMENTS:
 - make the 'Play with new' button in header operational?
 - play without quiz (input field) -- caveat: misspelling an AR word
-*/
-
-console.log(`
 
 MAKE IT POSSIBLE TO CHANGE WORDS-PER-PAGE?
-
-
 
 randomIndexes sometimes can return 2 same indexes - 2 same words for choices 
 
@@ -21,8 +16,8 @@ randomIndexes and Logic.otherOptions can sometimes have the same numbers
 
 Logic.getOtherOptions fails sometimes
 
+*/
 
-`)
 
 /* sessions it took to build it:
 1 -- 2h 10m
@@ -242,8 +237,6 @@ Visual.handleGameNextBtn( gameNextStep )
 function genQuestion() {
     const wordObj = Logic.getEntry(randomIndexes[questionNumber])
     const optionsObj = Logic.getOtherOptionsArrays(Logic.otherOptions[questionNumber]) // wordObj.translation
-    // console.log(wordObj)
-    // console.log(optionsObj)
     document.querySelector('.game__question-count span:nth-child(2)').textContent = randomIndexes.length    // showing the total num of questions
     Visual.generateQuestion(wordObj, optionsObj)
 }
