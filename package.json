@@ -1,0 +1,17 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "description": "created on 6524:1:30",
+  "main": "index.js",
+  "scripts": {
+    "compileSCSS": "node-sass scss/main.scss css/styles.css -w",
+    "devServer": "live-server",
+    "start": "npm-run-all --parallel devServer compileSCSS"
+  },
+  "author": "$$$",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

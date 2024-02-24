@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Flash Cards</title>
+</head>
+<body>
+
+
+    <div class="wrapper">
+    
+        <main class="main">
+    
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <h1 class="title">Flash Cards<span class="subtitle">Your Assistant in Language Learning</span>
+                            <span class="info">ⓘ
+                                <span class="info-text">This is a front-end application. Your data is saved locally: it is available only in this browser at this exact URL.</span>
+                            </span>
+                        </h1>
+                        <div class="header__box">
+                            <button class="button header__btn header__btn--new"><span>Add new word</span><span>+</span></button>
+                            <button class="button header__btn header__btn--play1" title="Play the guessing game to improve your memory with the words you've already added here!"><span>Play with added</span><span><img src="img/icons/game.svg" alt=""></span></button>
+                            <!-- <button class="button header__btn header__btn--play2">Play with new</button> -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+
+                <div class="recent-words">
+                    <div class="container">
+                        <div class="recent-words__wrapper">
+                            <h2 class="recent-words__title minor-title">Refresh your memory:</h2>
+                            <div class="recent-words__hint">Hint: you can delete a word by double-clicking on it</div>
+                            <div class="recent-words__items">
+                                <!-- <div class="recent-words__item">
+                                                <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                                <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="add invisible hidden">
+                    <div class="container">
+                        <div class="add__wrapper">
+                            <h3 class="add__title minor-title">Add a new word:</h3>
+                            <form action="#" class="add__form">
+                                <div class="add__form-box">
+                                    <input type="text" class="add__form-input">
+                                    <span class="add__form-input-placeholder">Word</span>
+                                </div>
+                                <div class="add__form-box">
+                                    <input type="text" class="add__form-input">
+                                    <span class="add__form-input-placeholder">Meaning</span>
+                                </div>
+                                <button class="add__form-btn button">Add</button>
+                                <div class="add__form-information hidden">Added successfully!</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="game invisible hidden">
+                    <div class="container">
+                        <div class="game__wrapper">
+                            <div class="game__title minor-title">Test your memory:</div>
+                            <div class="game__box">
+                                <div class="game__question-count"><span>0</span>/<span>0</span></div>
+                                <div class="game__question-indicator"><span style="width: 0%;"></span></div>
+                                <div class="game__question-title">What does <span>blah-blah</span> mean?</div>
+                                <div class="game__question-options">
+                                    <button class="game__question-option button">this</button>
+                                    <button class="game__question-option button">that</button>
+                                    <button class="game__question-option button">maybe this</button>
+                                    <button class="game__question-option button">maybe that</button>
+                                </div>
+                                <button class="game__question-btn button">Answer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="result invisible hidden">
+                    <div class="container">
+                        <div class="result__wrapper">
+                            <div class="result__title minor-title">Your result:</div>
+                            <div class="result__box">
+                                <div class="result__percent">70%</div>
+                                <div class="result__number">12 out of 18</div>
+                                <div class="result__verdict">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui unde esse magni accusamus porro, quaerat ad a voluptas minus. Eligendi fuga animi ullam corporis rem similique recusandae.</div>
+                                <button class="result__btn result__btn--details button">See the details</button>
+                                <button class="result__btn result__btn--again button">Play again</button>
+                                <div class="result__details hidden">
+                                    <div class="result__details-item">
+                                        <div class="result__details-item-number"></div>
+                                        <div class="result__details-item-word"></div>
+                                        <div class="result__details-item-answer-correct"></div>
+                                        <div class="result__details-item-answer-user"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="all invisible hidden">
+                    <div class="container">
+                        <div class="all__wrapper">
+                            <div class="all__top">
+                                <h3 class="all__title minor-title">Browse all your words:</h3>
+                                <div class="all__stat">Entries: 0</div>
+                            </div>
+                            <div class="all__items-box">
+                            <div class="all__items">
+                                <!-- <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div>
+                                <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div>
+                                <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div>
+                                <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div>
+                                <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div>
+                                <div class="recent-words__item">
+                                    <div class="recent-words__item-name"><span>Name:</span> <span>blah</span></div>
+                                    <div class="recent-words__item-translation"><span>Translation:</span> <span>blahblah</span></div>
+                                </div> -->
+                            </div>
+                            </div>
+                            <div class="all__footer">
+                                <button class="all__pagination-btn button pgn-btn pgn-btn--prev"><</button>
+                                <span class="pagination-count"><span>0</span>/<span>0</span></span>
+                                <!-- <button class="all__pagination-btn button pgn-btn pgn-btn--active">1</button> -->
+                                <!-- <button class="all__pagination-btn button pgn-btn">2</button> -->
+                                <button class="all__pagination-btn button pgn-btn pgn-btn--next">></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    
+        </main>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+
+                    <div class="footer__left">
+                        <div class="footer__informational">Now: <span class="time-now"></span></div>
+                    </div>
+
+                    <div class="footer__right">
+                        <button class="footer__btn see-all" title="See all the words you've added so far">See all words</button>
+                        <button class="footer__btn add-json" title="Add a new batch of words to your dictionary via the JSON input — ask GPT to generate it">Add as JSON</button>
+                        <button class="footer__btn export" title="Export all the words you've added so far — the JSON object will be copied to your clipboard and Console">Export as JSON</button>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    
+    
+    </div>
+
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
