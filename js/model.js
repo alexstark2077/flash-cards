@@ -10,7 +10,7 @@ class App {
     correctAnswers = []
     userAnswers = []
     otherOptions
-    howManyQuestions = 3   // in a quiz
+    howManyQuestions = 10   // in a quiz
     wordcardsPerPage = 6
 
     // ================================================================================================

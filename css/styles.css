@@ -295,9 +295,15 @@ Then, when using the mixin, you'd pass the string values directly:
   transition: all .3s; }
   .wordcard div + div {
     margin-top: 3rem; }
+    @media (max-width: 479.98px) {
+      .wordcard div + div {
+        margin-top: 2rem; } }
   .wordcard:hover {
     background-color: rgba(0, 255, 0, 0.4);
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); }
+  @media (max-width: 479.98px) {
+    .wordcard {
+      padding: 2rem; } }
   .wordcard__btn {
     position: absolute;
     top: 1rem;
@@ -617,10 +623,10 @@ button {
 
 .all__items-box {
   height: 460px;
-  overflow: hidden;
   margin-bottom: 3.5rem; }
   @media (max-width: 767.98px) {
     .all__items-box {
+      height: initial;
       max-height: 100%; } }
 
 .all__items {
@@ -631,13 +637,10 @@ button {
   column-gap: 3.5rem;
   row-gap: 3.5rem; }
   .all__items div {
-    flex: 0 1 48.5%; }
-    @media (max-width: 1182px) {
-      .all__items div {
-        flex: 0 1 48%; } }
+    flex: 1 1 48%; }
     @media (max-width: 992.98px) {
       .all__items div {
-        flex: 0 1 47.6%; } }
+        flex: 1 1 47%; } }
     @media (max-width: 767.98px) {
       .all__items div {
         flex: 1 1 100%; } }
@@ -688,7 +691,7 @@ button {
           flex: 1 1 47%; } }
       @media (max-width: 767.98px) {
         .recent-words__items div {
-          flex: 1 1 48%; } }
+          flex: 1 1 100%; } }
 
 .pagination-count {
   display: inline-block;
